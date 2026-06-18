@@ -1,0 +1,66 @@
+$blue-1: #2660A4;
+$blue-2: #EDF7F6;
+$yellow-1: #FFB342;
+$pink-1: #D882A0;
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  z-index: 5;
+  background-color: $blue-1;
+  padding: 20px 10px;
+  text-align: center;
+  position: fixed;
+  font-size: 30px;
+  font-family: "Career";
+  color: $yellow-1;
+  top: 0;
+  width: 100%;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    text-shadow: 2px 2px $pink-1;
+    font-size: 1.7em;
+  }
+
+  a {
+    color: $pink-1;
+    text-decoration: none;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    font-size: 18px;
+    font-family: "Lobular-Regular";
+  }
+
+  a:hover, a.selected {
+    text-shadow: 1px 1px 20px $yellow-1;
+  }
+}
+
+@media (max-width: 480px) {
+  header.isSticky {
+    font-size: 20px;
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+@media (min-width: 481px) {
+  header.isSticky {
+    font-size: 20px;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 1200px) {}
