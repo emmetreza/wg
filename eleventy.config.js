@@ -3,9 +3,7 @@ import * as sass from "sass";
 import browserslist from "browserslist";
 import { transform, browserslistToTargets } from "lightningcss";
 import { HtmlBasePlugin } from "@11ty/eleventy";
-import { config } from 'dotenv';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-config();
 
 export default function (eleventyConfig) {
 	eleventyConfig.setInputDirectory("src");
@@ -18,7 +16,6 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 	eleventyConfig.addPassthroughCopy("./src/img");
-	eleventyConfig.addGlobalData('env', process.env);
 
   eleventyConfig.addTemplateFormats("scss");
 

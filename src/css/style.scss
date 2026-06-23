@@ -36,7 +36,6 @@ header {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     font-size: 18px;
-    font-family: "Lobular-Regular";
   }
 
   a:hover, a.selected {
@@ -44,6 +43,19 @@ header {
   }
 }
 
+.image {
+  width: 40%;
+  height: auto;
+  margin: auto;
+}
+
+#graphics {
+  height: 100vh;
+}
+
+#graphics picture {
+  display: flex;
+}
 @media (max-width: 480px) {
   header.isSticky {
     font-size: 20px;
